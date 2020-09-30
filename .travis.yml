@@ -10,7 +10,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: KEY
+    secure: MY KEY
   app: server-exercise-tracker
   on:
     branch: master
