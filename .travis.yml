@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+  - node_modules
+script: 'true'
+deploy:
+  provider: heroku
+  api_key:
+    secure: MY KEY
+  app: server-exercise-tracker
+  on:
+    branch: master
