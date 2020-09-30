@@ -8,7 +8,7 @@ script: 'true'
 deploy:
   provider: heroku
   api_key:
-    secure: MY KEY
+    secure: secure: "SvKUlzvoOmJUl9bAtS64mDrVVC2FIY9Kqacior67j7Ft1Zx6ijbkah4eQsZDbn6oJNGuMcbO2UfW+P785LaTb4sEiaXOXnFSnoHUNBoeTPoiVmnlPKUWd0t0JYUnjg2N61kEbznquJEfNVRiStgDOsKglruKjYFcB2dHkrN054qda8rOf7nKXYtzUGhejrF5UHA/qN5MDTrsLdQLuDBraIY2DSC4j3OXSLnHh1HIpEayrErRf5j6pFtuDKHnSt+fWstXmxL7G5si4BoCS/1PZsOQM3Jp4MUt457C1fTVaJyqEtMfUC2ZECzadefkWx/qRcBPilDXBn6OP4s9AfOpJ1muBXEyy4tVGLcARIBq1bN5QYLGieR0w2hJzxRhQ385wp4ybqYGfm0Mn2SSjUzfT2LrYbN1wKndD5dMEvQRZK1HyHrSftvZOV5Fni/3CzLl4qlqnZJs7MO7MOIgyzENxOtiaXBj/hyzvbI/kxJGN+tXHxPQ/2Mhq/afP6EUYKcTyYnlQEvSUvTMaXD0jIh0x5VcBCafPRuXaPt6822jPE46GIZ8njbPVA8RBziXUH2dcQ51eIg5uUtxj/8+ZfJPxRO56UkfolMBdmKnEuhQ7yHa84RL+xGZ418RCRlnNMqrR97vvu+1hQv9haZ235pPj5TgJYGjzJHq9hCyxc7z9lQ="
   app: server-exercise-tracker
   on:
     branch: master
