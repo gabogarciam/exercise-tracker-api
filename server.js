@@ -1,5 +1,3 @@
-'use strict'
-
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
@@ -26,8 +24,8 @@ const exerciseRouter = require('./routes/exercises');
 
 mongoose.set('useCreateIndex', true);
 
-app.use('users', usersRouter);
-app.use('exercises', exerciseRouter);
+app.use('/users', usersRouter);
+app.use('/exercises', exerciseRouter);
 
 // start the server listening for requests
 app.listen(port, () => { console.log(`Server is running on port: ${port}`) });
