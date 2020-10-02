@@ -1,3 +1,5 @@
+'use strict'
+
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
@@ -19,14 +21,9 @@ connection.once('open', () => {
 });
 
 // Routes
-app.get("/", (req, res) => {
-    res.send(`<h1>Exercise Tracker API</h1>Server is running on port: ${port}`);
-});
+const usersRouter = require('./routes/users');
 
-// catch 404 and forward to error handler
-app.use((req, res, next) => {
-    res.status(404).json({code: 'not found'});
-});
+app.use('users', usersRouter);
 
 // start the server listening for requests
 app.listen(port, () => { console.log(`Server is running on port: ${port}`) });
