@@ -22,7 +22,7 @@ connection.once('open', () => {
 
 // Routes
 const usersRouter = require('./routes/users');
-
+mongoose.set('useCreateIndex', true);
 app.use('users', usersRouter);
 
 // start the server listening for requests
