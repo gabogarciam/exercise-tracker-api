@@ -22,8 +22,12 @@ connection.once('open', () => {
 
 // Routes
 const usersRouter = require('./routes/users');
+const exerciseRouter = require('./routes/exercises');
+
 mongoose.set('useCreateIndex', true);
+
 app.use('users', usersRouter);
+app.use('exercises', exerciseRouter);
 
 // start the server listening for requests
 app.listen(port, () => { console.log(`Server is running on port: ${port}`) });
