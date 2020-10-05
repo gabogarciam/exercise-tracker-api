@@ -14,11 +14,13 @@ app.use(express.json());
 require('./configs/db.config');
 
 // Routes
+const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const exerciseRouter = require('./routes/exercises');
 
 mongoose.set('useCreateIndex', true);
 
+app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/exercises', exerciseRouter);
 
