@@ -8,7 +8,7 @@ script: 'true'
 deploy:
   provider: heroku
   api_key:
-    secure: 298500f1-6b00-4569-b350-20e7c704b84b?requestor=SFMyNTY.g3QAAAACZAAEZGF0YW0AAAAMODEuMTg0LjQxLjUyZAAGc2lnbmVkbgYAZZFQ-3QB.AyLTd1N0iFqBvvdqCooHgyy2S05LWBTgBZGaxKATO9Q
+    secure: 2Oc4q+KXc0SWJ/g8Y4WpfKMCAyFSOVE8w7qxS+4mNaCr+Li8259mt7LMxp0YiQqvH6EvABXkfOcXFk5YlPuaP234Wu2TlhG+5PoDTW8ARqEMZJzNlPKT5v4AXEFTIWRxceJg77r20+bhTrgiZvoMiW3gpY/iEWPc1j14n4sYmg/ewyvZm5LUR1fUes2pMgGL5wD8nNsSQlhnMV+fu8lKPXWep0YB6mY6s+asYEvi8nSPwgb9NocGr5zH5T/G04yKcJOBqJk5p9Jyt5q+FVzh8/8kGJexMROwUapD4me3WjHoxEHZgQZMdA6AvJ+vNJf/LghvDN/LyO4T4gEqdpI1KwRp38oNWiXt68vA+MhHeIRjyMzFXJRCe5SOt6eMkUOCqjq+S/JM8T3yy0uF2SXraOON+6YwBlyqAr21bgHbxPIyKutK4p81A5HWsgCkCeaVOFswX9QR7IUfeVjorMu3vdfmoX2j0kVAsILBgpFRiOXMBCIgEFBRnc2ncSlfbp8HS73azUEYMoU5SyATKMjpP34AIcADGvt760x1RhcJgLXCIJuGXveVQF41DBfGZkicKK14KwzxwJ2LOmrgKqIhtI8etlcLK8k2m/jqeoPqHsbrUNO+fLXr7YJ6ChmFLheMJEQg+VBsuEGI61pOKPu5WwXebKEKQxcd1HfSALydk9Q=
   app: server-exercise-tracker
   on:
     repo: gabogarciam/exercise-tracker-api
