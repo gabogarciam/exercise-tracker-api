@@ -4,7 +4,12 @@
   "description": "Api of exercise tracker client",
   "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/server.js",
+    "heroku-postbuild": "webpack -p --config webpack.config.js --progress && webpack -p --config webpack.config.server.js --progress",
+    "buildProd": "rm -rf dist && webpack --mode production --config webpack.config.js",
+    "buildDev": "rm -rf dist && webpack --mode development --config webpack.config.js",
+    "dev": "rm -rf dist && webpack --mode development --config webpack.config.js && webpack-dev-server --mode development",
+    "transpile": "babel ./bin/server.js --out-dir dist-server"
   },
   "repository": {
     "type": "git",
@@ -22,5 +27,15 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.10.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "babel-loader": "^8.2.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-node-externals": "^2.5.2"
   }
 }
