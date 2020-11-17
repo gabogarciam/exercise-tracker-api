@@ -1,20 +1,20 @@
-const path = require("path");
-const webpack = require("webpack");
-const nodeExternals = require("webpack-node-externals");
+const path = require('path');
+const webpack = require('webpack');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   entry: {
-    server: "./bin/server.js",
+    server: './bin/server.js'
   },
   output: {
-    path: path.join(__dirname, "dist"),
-    publicPath: "/",
-    filename: "[name].js",
+    path: path.join(__dirname, 'dist'),
+    publicPath: '/',
+    filename: '[name].js'
   },
-  target: "node",
+  target: 'node',
   node: {
     __dirname: false,
-    __filename: false,
+    __filename: false
   },
   externals: [nodeExternals()],
   module: {
@@ -23,9 +23,9 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
-        },
-      },
-    ],
-  },
+          loader: 'babel-loader'
+        }
+      }
+    ]
+  }
 };

@@ -1,13 +1,13 @@
-const router = require("express").Router();
-const Exercise = require("../models/exercise.model");
+const router = require('express').Router();
+const Exercise = require('../models/exercise.model');
 
-router.route("/").get((req, res) => {
+router.route('/').get((req, res) => {
   Exercise.find()
     .then((exercices) => res.json(exercices))
     .catch((err) => res.status(400).json(`Erorr: ${err}`));
 });
 
-router.route("/add").post((req, res) => {
+router.route('/add').post((req, res) => {
   const { username } = req.body;
   const { description } = req.body;
   const { duration } = req.body;
@@ -17,12 +17,12 @@ router.route("/add").post((req, res) => {
     username,
     description,
     duration,
-    date,
+    date
   });
 
   newExercise
     .save()
-    .then(() => res.json("Exercise added!"))
+    .then(() => res.json('Exercise added!'))
     .catch((err) => res.status(400).json(`Error: ${err}`));
 });
 
