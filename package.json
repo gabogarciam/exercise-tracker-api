@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node ./bin/server.js",
-    "heroku-postbuild": "webpack -p --config webpack.config.js --progress && webpack -p --config webpack.config.server.js --progress",
+    "heroku-postbuild": "webpack -p --config webpack.config.js --progress",
     "buildProd": "rm -rf dist && webpack --mode production --config webpack.config.js",
     "buildDev": "rm -rf dist && webpack --mode development --config webpack.config.js",
     "dev": "rm -rf dist && webpack --mode development --config webpack.config.js && webpack-dev-server --mode development",
