@@ -1,29 +1,29 @@
-const mongoose = require('mongoose');
-const { type } = require('os');
-const Schema = mongoose.Schema;
+const mongoose = require("mongoose");
+
+const { Schema } = mongoose;
 
 const exerciseSchema = new Schema(
-    {
-        username: {
-            type: String,
-            require: true
-        },
-        description: {
-            type: String,
-            required: true
-        },
-        duration: {
-            type: Number,
-            required: true
-        },
-        date: {
-            type: Date,
-            required: true
-        }
+  {
+    username: {
+      type: String,
+      require: true,
     },
-    { timestamps: true }
+    description: {
+      type: String,
+      required: true,
+    },
+    duration: {
+      type: Number,
+      required: true,
+    },
+    date: {
+      type: Date,
+      required: true,
+    },
+  },
+  { timestamps: true }
 );
 
-const Exercise = mongoose.model('Exercise', exerciseSchema);
+const Exercise = mongoose.model("Exercise", exerciseSchema);
 
 module.exports = Exercise;
