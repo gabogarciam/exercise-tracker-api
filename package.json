@@ -4,11 +4,11 @@
   "description": "Api of exercise tracker client",
   "main": "app.js",
   "scripts": {
-    "start": "node ./bin/server.js",
+    "start": "node ./dist/server.js",
     "heroku-postbuild": "webpack -p --config webpack.config.js --progress",
     "buildProd": "rm -rf dist && webpack --mode production --config webpack.config.js",
     "buildDev": "rm -rf dist && webpack --mode development --config webpack.config.js",
-    "dev": "rm -rf dist && webpack --mode development --config webpack.config.js && webpack-dev-server --mode development",
+    "dev": "rm -rf dist && webpack --watch --config webpack.config.js && webpack --mode development --config webpack.config.js",
     "transpile": "babel ./bin/server.js --out-dir dist-server"
   },
   "repository": {
@@ -38,10 +38,10 @@
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.1.4",
+    "nodemon-webpack-plugin": "^4.3.2",
     "prettier": "^2.1.2",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0",
     "webpack-node-externals": "^2.5.2"
   }
 }
