@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
@@ -6,24 +6,24 @@ const exerciseSchema = new Schema(
   {
     username: {
       type: String,
-      require: true,
+      require: true
     },
     description: {
       type: String,
-      required: true,
+      required: true
     },
     duration: {
       type: Number,
-      required: true,
+      required: true
     },
     date: {
       type: Date,
-      required: true,
-    },
+      required: true
+    }
   },
   { timestamps: true }
 );
 
-const Exercise = mongoose.model("Exercise", exerciseSchema);
+const Exercise = mongoose.model('Exercise', exerciseSchema);
 
 module.exports = Exercise;
